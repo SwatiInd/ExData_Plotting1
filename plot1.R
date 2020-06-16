@@ -5,7 +5,7 @@ library(dplyr)
 url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/00235/household_power_consumption.zip"
 temp <- tempfile()
 download.file(url, temp)
-a <- read.delim(unzip(temp),header = TRUE, sep = ";", dec = ",")
+
 #reading the downloaded data into temp file by unzipping it
 a <- read.delim(unzip(temp),header = TRUE, sep = ";", dec = ",", na.strings = "?")
 
